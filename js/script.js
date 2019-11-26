@@ -18,7 +18,7 @@ const getNewColor = () => {
 randBtn.addEventListener('click', function(event) {
   event.preventDefault();
 
-  const audio = new Audio('./audio/ding.wav');
+  const audio = new Audio('../audio/ding.wav');
   const newDOMColor = getNewColor();
 
   hexCode.innerHTML = newDOMColor;
