@@ -4,7 +4,7 @@ const hexCode = document.getElementById('hexCode');
 
 const getNewColor = () => {
   let newHexCode = '';
-  let chars = '0123456789ABCDEF';
+  const chars = '0123456789ABCDEF';
   const hexLength = 6;
 
   for (let i = 0; i < hexLength; i++) {
@@ -19,8 +19,9 @@ randBtn.addEventListener('click', function(event) {
   event.preventDefault();
 
   const audio = new Audio('./audio/ding.wav');
+  const newDOMColor = getNewColor();
 
-  hexCode.innerHTML = getNewColor();
-  background.setAttribute('style', 'background-color:' + getNewColor());
+  hexCode.innerHTML = newDOMColor;
+  background.setAttribute('style', 'background-color:' + newDOMColor);
   audio.play();
 });
