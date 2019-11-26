@@ -37,11 +37,11 @@ const getNewColor = () => {
 
 The break down of this function is as such: <br>
 
-### 1.
+#### 1.
 
 Create a new arrow function using a `const` variable (because the function itself won't be chaning)
 
-### 2.
+#### 2.
 
 Create the variables we want scoped to only our new function
 
@@ -55,7 +55,7 @@ Create the variables we want scoped to only our new function
 - `chars` is the numbers and letters that we will allow access to to create our Hex Code (Hex Codes only use numbers 1-9 and letters A-F)
 - `hexLength` is the explicitly defined length of our new Hex Code. If we wanted to change our code to an RBGA code for example, we would need to change this variable as well
 
-### 3.
+#### 3.
 
 Create a `for loop` where we will generate our new 6 digit combination of letters and numbers
 
@@ -71,7 +71,7 @@ Create a `for loop` where we will generate our new 6 digit combination of letter
 - This is where the function gets tricky. First, we create a new variable that will hold a whole (`Math.floor()`), random (`Math.random()`) integrer that can only be the max length of our allowable characters in our `chars` variable
 - Now we will use this random number and create a `substring` with an offset of our new random number, `newHexChar` and our new random number + 1 `newHexChar + 1`, this will basically pick a random spot in our `chars` variable and add that one character to our `newHexCode` string.
 
-### 4.
+#### 4.
 
 The last piece of our arrow function puzzle is to `return` our new value, with a hash symbol `#` in front of it so we know its explicit purpose - to be our new Hex Code!
 
